@@ -7,9 +7,13 @@ Route::group(['middleware' => ['web'],'prefix'=>'admin','namespace'=>'Admin'], f
     Route::get('getcode','LoginController@getcode');
 });
 
-Route::group(['middleware' => ['web','admin.login'],'prefix'=>'admin','namespace'=>'Admin'],function (){
+Route::group(['middleware' => ['admin.login'],'prefix'=>'admin','namespace'=>'Admin'],function (){
     Route::get('index','IndexController@index');
     Route::get('info','IndexController@info');
     Route::get('quit','LoginController@quit');
+});
+
+
+Route::group(['middleware' => ['web','admin.login'],'prefix'=>'admin','namespace'=>'Admin'],function (){
     Route::any('pass','IndexController@pass');
 });
