@@ -9,7 +9,7 @@
 	<!--面包屑导航 开始-->
 	<div class="crumb_warp">
 		<!--<i class="fa fa-bell"></i> 欢迎使用登陆网站后台，建站的首选工具。-->
-		<i class="fa fa-home"></i> <a href="#">首页</a> &raquo; <a href="#">商品管理</a> &raquo; 添加商品
+		<i class="fa fa-home"></i> <a href="{{url('admin/info ')}}">首页</a>系统信息
 	</div>
 	<!--面包屑导航 结束-->
 	
@@ -39,7 +39,7 @@
                     <label>操作系统</label><span>{{PHP_OS}}</span>
                 </li>
                 <li>
-                    <label>运行环境</label><span>{{$_SERVER('SERVER_SOFTWARE')}}</span>
+                    <label>运行环境</label><span>{{PHP_OS}}</span>
                 </li>
                 <li>
                     <label>PHP运行方式</label><span>apache2handler</span>
