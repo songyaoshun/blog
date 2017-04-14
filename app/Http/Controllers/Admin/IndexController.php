@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Input;
-use Illuminate\Validation\Validator;
+use Illuminate\Support\Facades\Validator;
+
 
 class IndexController extends CommonController
 {
