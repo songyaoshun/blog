@@ -27,12 +27,12 @@ class LoginController extends CommonController
             }
             $user = User::first();
 
-            if($user->user_name == $input['user_name'] || Crypt::decrypt($user->user_passwd)==$input['user_passwd']){
+            if($user->user_name != $input['user_name'] || Crypt::decrypt($user->user_passwd)!=$input['user_passwd']){
                 return back()->with('msg','用户名或者密码错误！');
             }
 
 
-            echo ok;
+            echo 'ok';
 
         }else{
             return view('admin.login');
