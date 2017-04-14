@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-require_once 'resources/org/code/Code.class.php';
+require_once '/data1/www/blog/resources/org/code/Code.class.php';
+
 class LoginController extends CommonController
 {
     public function login()
