@@ -32,7 +32,8 @@ class LoginController extends CommonController
             }
 
 
-            echo "ok";
+            session(['user'=>$user]);
+            return redirect('admin/indx');
 
         }else{
             return view('admin.login');

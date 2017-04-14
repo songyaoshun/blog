@@ -36,6 +36,11 @@ Route::get('admin/index','Admin\IndexController@index');
 
 Route::group(['middleware' => ['web']], function () {
     Route::any('admin/login','Admin\LoginController@login');
-    Route::get('admin/index','Admin\IndexController@index');
-    Route::get('admin/info','Admin\IndexController@info');
+
+    Route::group(['middleware' => ['admin.login']],function (){
+        Route::get('admin/index','Admin\IndexController@index');
+        Route::get('admin/info','Admin\IndexController@info');
+
+    });
+
 });
