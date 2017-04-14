@@ -14,7 +14,7 @@ class LoginController extends CommonController
 {
     public function login()
     {
-        if($input=Input::all){
+        if($input=Input::all()){
             dd($input);
         }else{
             return view('admin.login');
