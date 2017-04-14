@@ -19,7 +19,7 @@ class LoginController extends CommonController
 {
     public function login()
     {
-        if($input = Input::all()){
+        if($input=Input::all()){
             $code=new \Code;
             $_code=$code->get();
             if(strtoupper($input['code'])!=$_code){
@@ -35,7 +35,7 @@ class LoginController extends CommonController
             echo ok;
 
         }else{
-
+            return view('admin.login');
         }
     }
 
