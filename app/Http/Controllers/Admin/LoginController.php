@@ -40,6 +40,10 @@ class LoginController extends CommonController
         $str='123456';
 
         echo Crypt::encrypt($str);
+
+        echo '<br>faffaf';
+
+        echo Crypt::decrypt(Crypt::encrypt($str));
     }
 
 }
