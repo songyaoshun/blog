@@ -35,8 +35,7 @@ class LoginController extends CommonController
             echo ok;
 
         }else{
-            $user = User::all();
-            dd($user);
+
         }
     }
 
