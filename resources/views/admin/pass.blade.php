@@ -13,7 +13,7 @@
 <div class="result_wrap">
     <div class="result_title">
         <h3>修改密码</h3>
-        {{dd($errors)}}
+
         @if(count($errors)>0)
             <div class="mark">
                 @foreach($errors->all() as $error)
