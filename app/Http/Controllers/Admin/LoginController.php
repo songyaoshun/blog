@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Model\User;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -21,11 +22,17 @@ class LoginController extends CommonController
             if(strtoupper($input['code'])!=$_code){
                return back()->with('msg','验证码错误');
             }
+            $user = User::first();
 
-            echo 123;
+            if($user->user_name == $input['user_name'] || Crypt::decrypt($user->user_passwd)==$input['user_passwd']){
+                return back()->with('msg','用户名或者密码错误！');
+            }
+
+
+            echo ok;
 
         }else{
-            $user = User:all();
+            $user = User::all();
             dd($user);
         }
     }
