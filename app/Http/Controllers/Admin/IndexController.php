@@ -18,4 +18,17 @@ class IndexController extends CommonController
     {
         return view('admin.info');
     }
+
+    //更改超级管理员密码
+
+    public function pass()
+    {
+
+        if ($input=Input::all()){
+            dd($input);
+        }else{
+            return view('admin.pass');
+        }
+
+    }
 }
