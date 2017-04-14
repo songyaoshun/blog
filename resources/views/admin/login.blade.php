@@ -10,7 +10,7 @@
 		<h1>Blog</h1>
 		<h2>欢迎使用博客管理平台</h2>
 		<div class="form">
-			{{$_SESSION}}
+			{{var_dump($_SESSION)}}
 			@if(Session::has('msg'))
 				<p style="color:red">{{Session::get('msg')}}</p>
 			@endif
