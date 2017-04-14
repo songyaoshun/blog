@@ -31,7 +31,6 @@ class IndexController extends CommonController
     {
 
         if ($input=Input::all()){
-            dd($input);
             $rules=[
                 'password'=>'required|between:6,20|confirmed',
             ];
@@ -48,7 +47,7 @@ class IndexController extends CommonController
                 $user = User::first();
                 $_password=Crypt::decrypt($user->user_passwd);
                 if ($input['password_o']==$_password){
-                    $user->user_pass = Crypt::encrypt($input['password_o']);
+                    $user->user_pass = Crypt::encrypt($input['password']);
                     $user->update();
 
                 }else{
