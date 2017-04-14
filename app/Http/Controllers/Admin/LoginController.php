@@ -25,14 +25,15 @@ class LoginController extends CommonController
             if(strtoupper($input['code'])!=$_code){
                return back()->with('msg','验证码错误');
             }
-            $user = User::first();
 
+            $user = User::first();
             if($user->user_name != $input['user_name'] || Crypt::decrypt($user->user_passwd)!=$input['user_passwd']){
                 return back()->with('msg','用户名或者密码错误！');
             }
 
 
-            echo 'ok';
+            session(['user'=>$user]);
+            dd(session('user'));
 
         }else{
             return view('admin.login');
