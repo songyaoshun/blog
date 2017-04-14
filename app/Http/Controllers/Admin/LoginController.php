@@ -33,7 +33,7 @@ class LoginController extends CommonController
 
 
             session(['user'=>$user]);
-            return redirect('admin/indx');
+            return redirect('admin/index');
 
         }else{
             return view('admin.login');
