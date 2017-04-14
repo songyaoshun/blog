@@ -18,8 +18,7 @@ class LoginController extends CommonController
             $code=new \Code;
             $_code=$code->get();
             if($input['code']!=$_code){
-                back()->with('msg','验证码错误');
-                dd(session('msg'));
+               return back()->with('msg','验证码错误');
             }
         }else{
             return view('admin.login');
