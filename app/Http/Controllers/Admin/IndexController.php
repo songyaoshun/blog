@@ -30,10 +30,15 @@ class IndexController extends CommonController
 
         if ($input=Input::all()){
             $rules=[
-                'password'=>'required',
+                'password'=>'required|between:6,20',
             ];
 
-            $validator=Validator::make($input,$rules);
+            $message=[
+                'password.required'=>'新密码不能为空！',
+                'password.between'=>'新密码必须是6到20位之间！',
+            ];
+
+            $validator=Validator::make($input,$rules,$message);
 
             if($validator->passes()){
                 echo 'Yes';
