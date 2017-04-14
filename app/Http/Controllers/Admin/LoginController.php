@@ -11,6 +11,6 @@ class LoginController extends CommonController
 {
     public function login()
     {
-        echo 124;
+        return view('admin.login');
     }
 }
