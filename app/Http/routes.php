@@ -34,6 +34,6 @@ Route::get('admin/crypt','Admin\LoginController@crypt');
 |
 */
 
-Route::group(['middleware' => ['web']], function () {
+/*Route::group(['middleware' => ['web']], function () {
     //
-});
+});*/
