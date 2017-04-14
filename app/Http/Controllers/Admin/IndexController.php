@@ -35,7 +35,7 @@ class IndexController extends CommonController
 
             $validator=Validator::make($input,$rules);
 
-            if($validator->pass()){
+            if($validator->passes()){
                 echo 'Yes';
             }else{
                  dd($validator->errors()->all());
