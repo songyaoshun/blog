@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+require_once 'resources/org/code/Code.class.php';
 class LoginController extends CommonController
 {
     public function login()
@@ -16,6 +17,7 @@ class LoginController extends CommonController
 
     public function code()
     {
-        echo 123;
+        $code=new \Code;
+        $code->make();
     }
 }
