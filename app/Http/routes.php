@@ -15,58 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-//http://blog.hd/user/dfsdfds
-Route::get('user/{id}', function ($id) {
-    return 'User '.$id;
-})->where('id', '[0-9]+');
-
-
-//Route::get('posts/{post}/comments/{comment?}', function ($postId=0, $commentId=null) {
-//    return $postId .'----'.$commentId;
-//});
-
-//Route::get('user_{id}', function ($i) {
-//    return 'User '.$i;
-//});
-//
-//Route::get('posts/{post}/comments/{comment}', function ($postId, $commentId) {
-//    return $commentId;
-//});
-
-//
-//Route::get('/hd', function () {
-//    echo 'get';
-//});
-//
-//Route::post('/hd', function () {
-//    echo 'post';
-//});
-//
-//Route::put('/hd', function () {
-//    echo 'put';
-//});
-//
-//Route::delete('/hd', function () {
-//    echo 'delete';
-//});
-//
-//Route::patch('/hd', function () {
-//    echo 'patch';
-//});
-//
-//Route::options('/hd', function () {
-//    echo 'options';
-//});
-//
-//
-//Route::match(['get', 'post','patch'], '/test', function () {
-//    echo 'match';
-//});
-//
-//Route::any('foo', function () {
-//    echo 'foo';
-//});
+Route::get('/test','IndexController@index');
 
 /*
 |--------------------------------------------------------------------------
