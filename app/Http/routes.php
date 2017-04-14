@@ -14,6 +14,6 @@ Route::group(['middleware' => ['admin.login'],'prefix'=>'admin','namespace'=>'Ad
 });
 
 
-Route::group(['middleware' => ['web','admin.login'],'prefix'=>'admin','namespace'=>'Admin'],function (){
+Route::group(['middleware' => ['web'],'prefix'=>'admin','namespace'=>'Admin'],function (){
     Route::any('pass','IndexController@pass');
 });
