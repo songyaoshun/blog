@@ -10,7 +10,6 @@
 		<h1>Blog</h1>
 		<h2>欢迎使用博客管理平台</h2>
 		<div class="form">
-			{{}}
 			@if(session('msg'))
 				<p style="color:red">{{session('msg')}}</p>
 			@endif
