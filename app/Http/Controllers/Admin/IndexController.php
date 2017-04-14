@@ -37,7 +37,7 @@ class IndexController extends CommonController
             if($validator->pass()){
                 echo 'Yes';
             }else{
-                 echo 'No';
+                 dd($validator->errors()->all());
             }
 
         }else{
