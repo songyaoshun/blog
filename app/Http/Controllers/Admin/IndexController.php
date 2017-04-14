@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Dotenv\Validator;
-use Illuminate\Foundation\Validation\ValidatesRequests;
+
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Validation\Validator;
 
 class IndexController extends CommonController
 {
