@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Dotenv\Validator;
+use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -26,7 +28,18 @@ class IndexController extends CommonController
     {
 
         if ($input=Input::all()){
-            dd($input);
+            $rules=[
+                'password'=>'required',
+            ];
+
+            $validator=Validator::make($input,$rules);
+
+            if($validator->pass()){
+                echo 'Yes';
+            }else{
+                 echo 'No';
+            }
+
         }else{
             return view('admin.pass');
         }
