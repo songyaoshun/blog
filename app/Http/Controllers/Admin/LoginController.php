@@ -20,7 +20,7 @@ class LoginController extends CommonController
             $_code=$code->get();
 
             if($input['code']!=$_code){
-               return back()->with('msg','dgsdgsdfgs');
+               return back()->with('msg','验证码错误');
             }else{
                 echo 123;
             }
