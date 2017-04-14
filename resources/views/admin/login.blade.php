@@ -11,14 +11,14 @@
 		<h2>欢迎使用博客管理平台</h2>
 		<div class="form">
 			<p style="color:red">用户名错误</p>
-			<form action="#" method="post">
+			<form action="" method="post">
 				<ul>
 					<li>
-					<input type="text" name="username" class="text"/>
+					<input type="text" name="user_name" class="text"/>
 						<span><i class="fa fa-user"></i></span>
 					</li>
 					<li>
-						<input type="password" name="password" class="text"/>
+						<input type="password" name="user_password" class="text"/>
 						<span><i class="fa fa-lock"></i></span>
 					</li>
 					<li>
