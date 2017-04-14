@@ -23,7 +23,6 @@ class LoginController extends CommonController
         }else{
             return view('admin.login');
         }
-        dd($_code);
     }
 
     public function code()
