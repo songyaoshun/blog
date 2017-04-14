@@ -14,16 +14,16 @@ class LoginController extends CommonController
 {
     public function login()
     {
-        if($input=Input::all()){
+        if($input = Input::all()){
             $code=new \Code;
             $_code=$code->get();
-            dd($_code);
             if($input['code']!=$_code){
                 return back()->with('msg','验证码错误');
             }
         }else{
             return view('admin.login');
         }
+        dd($_code);
     }
 
     public function code()
