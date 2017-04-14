@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Route::get('/test','IndexController@index');
 
-Route::get('login','Admin\LoginController@login');
+Route::get('admin/login','Admin\LoginController@login');
 
 /*
 |--------------------------------------------------------------------------
