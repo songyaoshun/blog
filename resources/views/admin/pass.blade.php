@@ -37,7 +37,7 @@
             <tr>
                 <th><i class="require">*</i>确认密码：</th>
                 <td>
-                    <input type="password" name="password_c"> </i>再次输入密码</span>
+                    <input type="password" name="password_confirmation"> </i>再次输入密码</span>
                 </td>
             </tr>
             <tr>

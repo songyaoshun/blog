@@ -30,7 +30,7 @@ class IndexController extends CommonController
 
         if ($input=Input::all()){
             $rules=[
-                'password'=>'required|between:6,20',
+                'password'=>'required|between:6,20|confirmed',
             ];
 
             $message=[
