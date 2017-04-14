@@ -15,7 +15,11 @@ class LoginController extends CommonController
     public function login()
     {
         if($input=Input::all()){
-            dd($input);
+            $code=new \Code;
+            $_code=$code->get();
+            if($input['code']!=$_code){
+                return back()->with('msg','验证码错误');
+            }
         }else{
             return view('admin.login');
         }
@@ -29,8 +33,7 @@ class LoginController extends CommonController
 
     public function getcode()
     {
-        $code=new \Code;
-        echo $code->get();
+
     }
 
 }
