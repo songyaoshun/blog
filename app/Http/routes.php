@@ -21,7 +21,8 @@ Route::get('/', function () {
 
 Route::get('admin/code','Admin\LoginController@code');
 Route::get('admin/getcode','Admin\LoginController@getcode');
-Route::get('admin/index','Admin\IndexController@index');
+Route::get('admin/quit','Admin\LoginController@quit');
+
 
 /*
 |--------------------------------------------------------------------------

@@ -46,15 +46,10 @@ class LoginController extends CommonController
         $code->make();
     }
 
-    public function crypt()
+    public function quit()
     {
-        $str='123456';
-
-        echo Crypt::encrypt($str);
-
-        echo '<br>faffaf';
-
-        echo Crypt::decrypt(Crypt::encrypt($str));
+        session(['user'=>null]);
+        return redirect('admin/login');
     }
 
 }
