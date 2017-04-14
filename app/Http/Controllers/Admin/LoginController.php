@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Input;
 
 require_once '/data1/www/blog/resources/views/org/code/Code.class.php';
@@ -34,9 +35,11 @@ class LoginController extends CommonController
         $code->make();
     }
 
-    public function getcode()
+    public function crypt()
     {
+        $str='123456';
 
+        echo Crypt::encrypt($str);
     }
 
 }
