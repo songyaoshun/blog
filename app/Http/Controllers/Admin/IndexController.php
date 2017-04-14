@@ -47,7 +47,7 @@ class IndexController extends CommonController
                 $user = User::first();
                 $_password=Crypt::decrypt($user->user_passwd);
                 if ($input['password_o']==$_password){
-                    $user->user_pass = Crypt::encrypt($input['password']);
+                    $user->user_passwd = Crypt::encrypt($input['password']);
                     $user->update();
                     return back()->with('errors','密码修改成功');
                 }else{
